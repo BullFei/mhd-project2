@@ -23,6 +23,7 @@
 
 // 引入抽离出来的插件
 import { Swiper, SwiperItem } from '@/components/Swiper'
+import { getBanner } from '@/api/cartoon'
 
 export default {
   name: 'Home',
@@ -34,16 +35,36 @@ export default {
     changeHandler (payload) {
       console.log('index', payload)
     }
+  },
+  created () {
+    // 下载轮播图的数据
+    getBanner().then(res => {
+      console.log(res)
+    })
   }
 }
 </script>
 
 <style lang="scss" scoped>
+@import "~@/assets/styles/mixins.scss";
 .page-home {
   display: flex;
   flex-direction: column;
   height: 100%;
   .index-header {
+    // border-bottom: 1px solid #ededed;;
+    // position: relative;
+    // &::after{
+    //   content: '';
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 1px;
+    //   left: 0px;
+    //   bottom: 0px;
+    //   background: #ededed;
+    //   transform: scaleY(0.5);
+    // }
+    @include border-bottom;
     display: flex;
     height: 44px;
     //三者等分平铺
