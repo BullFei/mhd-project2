@@ -16,3 +16,19 @@ export const getBanner = () => {
     }
   })
 }
+
+/**
+ * 获取首页推荐的数据
+ * https://mhd.zhuishushenqi.com/comic_v2/customerview?apptype=8&appversion=1.0&channel=web-app&viewtype=1
+*/
+export const getIndexRecomment = () => {
+  return request({
+    url: '/api/comic_v2/customerview',
+    params: {
+      apptype: 8,
+      appversion: 1.0,
+      ' channel': 'web-app',
+      viewtype: 1
+    }
+  })
+}
