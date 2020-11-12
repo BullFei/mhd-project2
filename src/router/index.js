@@ -14,6 +14,9 @@ import Register from '../views/Resigter'
 import Search from '../views/Search'
 import SearchResult from '../views/SearchResult'
 import Vip from '../views/Vip'
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
+nprogress.configure({ showSpinner: false })
 
 Vue.use(VueRouter)
 
@@ -40,6 +43,16 @@ const router = new VueRouter({
     { path: '/vip', component: Vip },
     { path: '/', redirect: '/home' }
   ]
+})
+
+// 添加全局路由守卫  在这里我们去给每个页面 添加加载进图条
+router.beforeEach((to, from, next) => {
+  nprogress.start()
+  next()
+})
+
+router.afterEach((to, from) => {
+  nprogress.done()
 })
 
 // 对外暴露

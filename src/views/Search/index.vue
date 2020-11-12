@@ -86,9 +86,6 @@ export default {
         } else {
           console.log(res.code_msg)
         }
-      }).catch(err => {
-        console.log(err)
-        alert('网络请求异常，请稍后重试')
       })
     },
     // 点击热门搜索，保存点击记录，并且跳转的搜索结果页面去
@@ -133,9 +130,6 @@ export default {
         } else {
           console.log(res.code_msg)
         }
-      }).catch(err => {
-        console.log(err)
-        alert('网络异常，请稍后重试')
       })
     }
   },

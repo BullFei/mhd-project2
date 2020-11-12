@@ -76,11 +76,8 @@ export default {
           } else {
             // 不ok，就在页面上报错
             // 在这里我们先通过 alert 进行报错，后期 我们可以用一下 vant 组件库的组件
-            alert(res.code_msg)
+            console.log(res.code_msg)
           }
-        })
-        .catch(err => {
-          alert('网络异常，请稍后：' + err)
         })
     },
     getIndexRecomment () {
@@ -93,9 +90,6 @@ export default {
             // 在这里我们先通过 alert 进行报错，后期 我们可以用一下 vant 组件库的组件
             alert(res.code_msg)
           }
-        })
-        .catch(err => {
-          alert('网络异常，请稍后：' + err)
         })
     }
   },
