@@ -1,6 +1,7 @@
 <template>
   <div class = 'page-hello'>
     <h1>收藏和历史页面的首页</h1>
+    <router-view></router-view>
   </div>
 </template>
 
