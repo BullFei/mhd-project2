@@ -1,5 +1,6 @@
 <template>
   <div class="page-home">
+    <router-link to = '/city'>当前选中城市为：{{ $store.getters['city/curCityName'] }}</router-link>
     <index-header></index-header>
     <div class="index-main">
       <Swiper class="my-swiper" v-if="bannerList.length > 0" :autoplay="3000">

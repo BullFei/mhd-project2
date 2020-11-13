@@ -1,5 +1,6 @@
 <template>
   <div class="page-classify">
+    <router-link to = '/city'>当前选中城市为：{{ $store.getters['city/curCityName'] }}</router-link>
     <normal-header title = '分类'></normal-header>
     <div class = 'classify-main'>
       <header-type :types = "types" @click = "onChange"></header-type>

@@ -14,6 +14,7 @@ import Register from '../views/Resigter'
 import Search from '../views/Search'
 import SearchResult from '../views/SearchResult'
 import Vip from '../views/Vip'
+import City from '../views/City'
 import nprogress from 'nprogress'
 import 'nprogress/nprogress.css'
 nprogress.configure({ showSpinner: false })
@@ -41,6 +42,7 @@ const router = new VueRouter({
     { path: '/search', component: Search },
     { path: '/search-result', component: SearchResult },
     { path: '/vip', component: Vip },
+    { path: '/city', component: City },
     { path: '/', redirect: '/home' }
   ]
 })
